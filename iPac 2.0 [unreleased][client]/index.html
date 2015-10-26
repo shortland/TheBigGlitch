@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=0, width=device-width, height=device-height"/>
+        
+        
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.map"></script>
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-2.1.1.min.map"></script>
+        
+
+        
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            
+            // Wait for device API libraries to load
+            //
+            document.addEventListener("deviceready", onDeviceReady, false);
+            
+            // device APIs are available
+            //
+            
+            
+            function onDeviceReady() {
+                var awesome = window.localStorage.getItem("awesome");
+                if (awesome == "NO"){
+                    window.open('ban.html');
+                }
+                
+                window.localStorage.setItem("VERSION", "2.0.14");
+                // write the backrgound IF background doesnt exist.
+                var currentBG = window.localStorage.getItem("background");
+                if (typeof currentBG === 'undefined') {
+                    window.localStorage.setItem("background", "<img src='images/WATER.png' id='background'></img>");
+                }
+                
+                //   if (currentBG == ""){
+                //
+                //   }
+                
+                // Get and Set UUID
+                var str=device.uuid;
+                var uuidwithout = str.replace(/-/g, "");
+                
+                window.localStorage.setItem("THE_UUID", uuidwithout);
+                var uuid_name = window.localStorage.key(1);
+                var uuid_key = window.localStorage.getItem("THE_UUID");
+                
+                // Create Hash and Set
+                var hash = CryptoJS.MD5(uuid_key);
+                
+                window.localStorage.setItem("THE_HASH", hash);
+                var hash_name = window.localStorage.key(1);
+                var hash_key = window.localStorage.getItem("THE_HASH");
+                
+                // Create Trio and Set
+                var trio = CryptoJS.HmacMD5(uuid_key, hash);
+                
+                window.localStorage.setItem("THE_TRIO", trio);
+                var trio_name = window.localStorage.key(1);
+                var trio_key = window.localStorage.getItem("THE_TRIO");
+                /* stuff
+                 alert(uuid_key);
+                 alert(hash_key);
+                 alert(trio_key);
+                 */
+                
+            }
+        </script>
+        <script src='js/validate.js'></script>
+        <script src='js/hash.js'></script>
+        <script src='js/crypto.js'></script>
+        <script src='js/produced.js'></script>
+        <script type="text/javascript">
+            var old4 = '';
+            function maintenance()
+            {
+                var textarea = document.f4.ta4;
+                var d4 = parent.dynamicframe4.document;
+                
+                old4 = textarea.value;
+                d4.open();
+                d4.write(old4);
+                d4.close();
+                window.open('example.html');
+            }
+        
+            </script>
+    </head>
+    
+    
+    <form name="f4" method="post" target="dynamicframe4">
+        <!-- deleted -->
+        
+        <div style='display:none;'>
+            <script type="text/javascript">edToolbar4('canvas4');</script>
+            <textarea id="canvas4" name="ta4" rows="0" cols="0">
+                <script>
+                    (function MEEPFunction() {
+                     alert("Server Maintenance! One moment please!");
+                     })();
+                    </script>
+            </textarea>
+            </form>
+    <iframe name="dynamicframe4" id="dynamicframe4" src="javascript:'-'"></iframe>
+    </div>
+    
+        <body onLoad='ping()' bgcolor='#000000'>
+            </head>
+    <body>
+        
+    </body>
+</html>

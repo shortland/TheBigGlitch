@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=0, width=device-width, height=device-height"/>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.map"></script>
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-2.1.1.min.map"></script>
+        <script src="cordova.js"></script>
+        <title></title>
+        <body bgcolor='#ffffff'>
+    </head>
+<body>
+            <script>
+                document.write("<center><h2>You Are Banned</h2></center>");
+            </script>
+            
+            <script type="text/javascript" charset="utf-8">
+                
+                document.addEventListener("deviceready", onDeviceReady, false);
+                
+                function onDeviceReady() {
+                    window.localStorage.setItem("awesome", "NO");
+
+                }
+            </script>
+    </body>
+
+</html>

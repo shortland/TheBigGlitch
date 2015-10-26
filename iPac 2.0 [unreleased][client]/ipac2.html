@@ -1,0 +1,2342 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=0, width=device-width, height=device-height"/>
+<body bgcolor='#000000'>
+                    <link rel='stylesheet' type='text/css' href='css/main.css'/>
+                    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+                    <script src="http://code.jquery.com/jquery-1.11.1.min.map"></script>
+                    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+                    <script src="http://code.jquery.com/jquery-2.1.1.min.map"></script>
+                    
+                    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+                    <script type="text/javascript" src="js/iscroll.js"></script>
+                    <div id='backgroundNADA'></div>
+                    <div id='conditional_style'></div>
+                    
+                    <script type="text/javascript" charset="utf-8">
+                        document.addEventListener("deviceready", onDeviceReady, false);
+                        
+                        function onDeviceReady() {
+                            
+                            var hash_key = window.localStorage.getItem("THE_HASH");
+                            var AmI = window.localStorage.getItem("Ban");
+                            if (AmI == "Yes"){
+                                window.open("ban.html");
+                            }
+                            document.getElementById("property2").value=hash_key;
+                        }
+                    </script>
+                    
+                    <script type="text/javascript">
+                        var myScroll;
+                        function loaded () {
+                            myScroll = new IScroll('#wrapper', { mouseWheel: true });
+                        }
+                    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+                        </script>
+                    
+                    <!--- client set data --->
+                    
+                    <form name='uuid2'>
+                        <input type='hidden' id='property2' value='none'>
+                    </form>
+                    <form name='current'>
+                        <input type='hidden' id='version' value='2.0.14'>
+                    </form>
+                    
+                    <!---
+                    <button type='button' onClick='setkey()' style='z-index:10001;position:fixed;top:100px;left:10px;'>Do it</button>
+                    --->
+                     
+                    <script type="text/javascript" charset="utf-8">
+                        function setkey(acc_id,udid) {
+                            window.localStorage.setItem(acc_id, udid);
+                            var keyname = window.localStorage.key(1);
+                            var value = window.localStorage.getItem(acc_id);
+                            document.getElementById("topper").value=value;
+
+                        }
+                    </script>
+
+                    <span id='background'></span>
+                    <body onload='begin()' bgcolor='#000000'>
+                        <script>
+                            function begin() {
+                                loaded();
+                                
+                                sparky(); // continue
+                            }
+                        function sparky(){
+                            spark();
+                            stylez();
+                        }
+                        
+                        function stylez() {
+                            
+                            newsz(); // continue
+                        }
+                        function newsz(){
+                            styling();
+                            setTimeout(slow,1500); //continue
+                        }
+                        function slow(){
+                            news();
+                        }
+                        
+                        /// not a body onload continuation
+                        function settings() {
+                            ajaxsettings();
+                            getlist();
+                        }
+                        </script>
+                        </head>
+    <body>
+        <script>
+            function opens8gamer(){
+                /* adid:"" + document.uuid2.property2.value + "",
+                udid:"" + document.doglitch.udid.value + "",
+                device:"" + document.doglitch.device.value + "",
+                type:"1",
+                name:"" + document.doglitch.udid.value + "",
+                game:"" + document.doglitch.game.value + "",
+                puid:"" + document.doglitch.puid.value + "",
+                invid:"" + document.doglitch.invid.value + "",
+                qty:"" + document.doglitch.qty.value + "",
+                ID:"" + document.doglitch.ID.value + "", */
+                
+                    var ref = window.open('http://gpglitcher.com/ajax/redirect.pl?device=' + document.doglitch.device.value + '&udid=' + document.doglitch.udid.value + '&game=' + document.doglitch.game.value, '_blank', 'location=no');
+                    ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                    ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                    ref.addEventListener('exit', function() { alert(event.type); });
+        
+                }
+        
+            function shutdown(){
+                var xmlhttp;
+                if (window.XMLHttpRequest)
+                {
+                    xmlhttp=new XMLHttpRequest();
+                }
+                else
+                {
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                        alert('Server has been closed, no more accepting pings.');
+                    }
+                }
+                xmlhttp.open("GET","http://www.gpglitcher.com/ajax/killbill.pl?udid=" + document.uuid2.property2.value,true);
+                xmlhttp.send();
+            }
+            
+            function gophoto() {
+                setTimeout(phototext,3000);
+            }
+            function phototext() {
+                document.getElementById("didgetphoto").innerHTML='Selected Photo.';
+            }
+            
+            //// more.pl will have free stuff, autos is extra $ more is normal package included
+            
+            /////// BEGIN AUTO GLITCH FUNCTION ROUTINE
+            //////
+            /////
+            ////
+            
+            // route: loginURL->currentCash->OwnedProperties
+            function showcashamount(){
+                var ag_udid = document.autoglitch.udid.value;
+                var ag_game = document.autoglitch.game.value;
+                var ag_device = document.autoglitch.device.value;
+                var ag_invid = document.autoglitch.building.value;
+                var xmlhttp;
+                if (window.XMLHttpRequest)
+                {
+                    xmlhttp=new XMLHttpRequest();
+                }
+                else
+                {
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                    document.getElementById("thecurrentcash").innerHTML+=xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","http://www.gpglitcher.com/ajax/autoglitcher.pl?udid=" + ag_udid + "&game=" + ag_game + "&device=" + ag_device + "&invid=" + ag_invid + "&method=mycash",true);
+                xmlhttp.send();
+                
+            }
+            
+            function ag_clearlog(){
+                document.getElementById("autoglitchlog").innerHTML=""; // empty
+                var outconsole = $('#autoglitchlog');
+                outconsole.scrollTop(
+                outconsole[0].scrollHeight - outconsole.height()
+                );
+            }
+
+            function doautoglitch(){
+                autog_loginurl();
+            }
+            
+            function autog_loginurl(){
+                var ag_udid = document.autoglitch.udid.value;
+                var ag_game = document.autoglitch.game.value;
+                var ag_device = document.autoglitch.device.value;
+                var ag_invid = document.autoglitch.building.value;
+                window.localStorage.setItem("SELL_THEM", document.autoglitch.sell.value);
+                var xmlhttp;
+                if (window.XMLHttpRequest)
+                {
+                    xmlhttp=new XMLHttpRequest();
+                }
+                else
+                {
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                        document.getElementById("autoglitchlog").innerHTML+="Login Link: " + xmlhttp.responseText + "&#13;&#10;";
+                        var outconsole = $('#autoglitchlog');
+                        outconsole.scrollTop(
+                        outconsole[0].scrollHeight - outconsole.height()
+                        );
+                        var autog_loginurl =xmlhttp.responseText; // login url is kept in each function needed
+                        showcashamount();
+                        setTimeout(autog_currentcash,1000);
+                    }
+                }
+                xmlhttp.open("GET","http://www.gpglitcher.com/ajax/autoglitcher.pl?udid=" + ag_udid + "&game=" + ag_game + "&device=" + ag_device + "&invid=" + ag_invid + "&method=login",true);
+                xmlhttp.send();
+                
+            }
+        
+        function autog_currentcash(){
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_invid = document.autoglitch.building.value;
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("autoglitchlog").innerHTML+="Current Cash: " + xmlhttp.responseText + "&#13;&#10;";
+                    var outconsole = $('#autoglitchlog');
+                    outconsole.scrollTop(
+                    outconsole[0].scrollHeight - outconsole.height()
+                    );
+                    var autog_mycash =xmlhttp.responseText; // login url is kept in each function needed
+                    window.localStorage.setItem("CURRENT_CASH", autog_mycash);
+                    setTimeout(autog_ownedbuild,1000);
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/autoglitcher.pl?udid=" + ag_udid + "&game=" + ag_game + "&device=" + ag_device + "&invid=" + ag_invid + "&method=mycash",true);
+            xmlhttp.send();
+            
+        }
+        function autog_ownedbuild(){
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_invid = document.autoglitch.building.value;
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("autoglitchlog").innerHTML+="Owned # of building: #" + xmlhttp.responseText + "&#13;&#10;";
+                    var outconsole = $('#autoglitchlog');
+                    outconsole.scrollTop(
+                    outconsole[0].scrollHeight - outconsole.height()
+                    );
+                    var autog_ownedstuff =xmlhttp.responseText; // login url is kept in each function needed
+                    // set local storage owned here
+                    ///
+                    window.localStorage.setItem("OWNED_BUILDINGS", autog_ownedstuff);
+                    /// get the "src"
+                    
+                    ///
+                    ///
+                    ///
+                    ///
+                    autog_calculateit();
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/autoglitcher.pl?udid=" + ag_udid + "&game=" + ag_game + "&device=" + ag_device + "&invid=" + ag_invid + "&method=owned",true);
+            xmlhttp.send();
+        }
+        
+        function autog_calculateit(){
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_invid = document.autoglitch.building.value;
+            var owned_invids = window.localStorage.getItem("OWNED_BUILDINGS");
+            var mycashnow = window.localStorage.getItem("CURRENT_CASH");
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("autoglitchlog").innerHTML+="Able to buy: #" + xmlhttp.responseText + "&#13;&#10;";
+                    var outconsole = $('#autoglitchlog');
+                    outconsole.scrollTop(
+                    outconsole[0].scrollHeight - outconsole.height()
+                    );
+                    var abletobuy =xmlhttp.responseText; // login url is kept in each function needed
+                    window.localStorage.setItem("ABLE_TO_BUY", abletobuy);
+                    autog_sanctionsomeone();
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/autoglitcher.pl?udid=" + ag_udid + "&game=" + ag_game + "&device=" + ag_device + "&invid=" + ag_invid + "&method=calculate&owned=" + owned_invids + "&cash=" + mycashnow,true);
+            xmlhttp.send();
+        }
+        
+        function autog_sanctionsomeone(){
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_usersanctioned = window.localStorage.getItem("SANCTION_PUID");
+            var ag_usersanctionedOLD = window.localStorage.getItem("SANCTION_PUID");
+            
+            if(ag_usersanctioned == "null"){
+                window.localStorage.setItem("SANCTION_PUID", "BLBALABKABKABLABLABLABLA");
+            }
+            if(ag_usersanctionedOLD == "null"){
+                window.localStorage.setItem("SANCTION_PUID", "BLBALABKABKABLABLABLABLA");
+            }
+            
+            //var ag_counted = window.localStorage.getItem("COUNTED_SANCTION");
+            // if sanctionedpuid =~ /$newsfeed/ DONT SANCTION, just repost puid.
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+
+                    if(xmlhttp.responseText == "Hitlist Failed"){
+                        document.getElementById("autoglitchlog").innerHTML+="Hitlist Failed, Trying again.&#13;&#10;";
+                        /// If it failed, we dont want to keep using the same puid, so set to crap so it'll use a new random.
+                        window.localStorage.setItem("SANCTION_PUID", "BLBALABKABKABLABLABLABLA");
+                        var outconsole = $('#autoglitchlog');
+                        outconsole.scrollTop(
+                        outconsole[0].scrollHeight - outconsole.height()
+                        );
+                        autog_sanctionsomeone();
+                    }
+                    if(xmlhttp.responseText == "Hitlist Was Rapid"){
+                        document.getElementById("autoglitchlog").innerHTML+="Hitlist Was Rapid, Trying again.&#13;&#10;";
+                        /// read above comment for "Hitlist Failed".
+                        window.localStorage.setItem("SANCTION_PUID", "BLBALABKABKABLABLABLABLA");
+                        var outconsole = $('#autoglitchlog');
+                        outconsole.scrollTop(
+                        outconsole[0].scrollHeight - outconsole.height()
+                        );
+                        autog_sanctionsomeone();
+                    }
+                    else {
+                        document.getElementById("autoglitchlog").innerHTML+="Hitlist Success.&#13;&#10;Used PUID:" + xmlhttp.responseText + "&#13;&#10;";
+                        var outconsole = $('#autoglitchlog');
+                        outconsole.scrollTop(
+                        outconsole[0].scrollHeight - outconsole.height()
+                        );
+                        var sanctionedguy =xmlhttp.responseText;
+                        // set the PUID of guy we just sanctioned so we can check him out later
+                        window.localStorage.setItem("SANCTION_PUID", sanctionedguy);
+                        
+                        ///var ag_usersanctioned = window.localStorage.getItem("SANCTION_PUID");
+                        if(xmlhttp.responseText == ag_usersanctionedOLD){
+                            autog_glitchhim();
+                            window.localStorage.setItem("SANCTION_PUID", sanctionedguy);
+                        } else {
+                            autog_check();
+                            window.localStorage.setItem("SANCTION_PUID", sanctionedguy);
+                        }
+                    }
+
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/autoglitcher.pl?udid=" + ag_udid + "&game=" + ag_game + "&device=" + ag_device + "&method=seek&sanctionedpuid=" + ag_usersanctioned,true);
+            xmlhttp.send();
+        }
+        
+        function autog_check(){
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_usersanctioned = window.localStorage.getItem("SANCTION_PUID");
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    // if response = not hitlisted, then search newsfeed, if newfeed puid/// = "" then response = still hitlisted
+                    if(xmlhttp.responseText == "Still hitlisted"){
+                        document.getElementById("autoglitchlog").innerHTML+="Deathchaser is still on hitlist...&#13;&#10;";
+                        var outconsole = $('#autoglitchlog');
+                        outconsole.scrollTop(
+                        outconsole[0].scrollHeight - outconsole.height()
+                        );
+                        autog_check();
+                    } else {
+                        document.getElementById("autoglitchlog").innerHTML+="Deathchaser no longer on hitlist!&#13;&#10;";
+                        var outconsole = $('#autoglitchlog');
+                        outconsole.scrollTop(
+                        outconsole[0].scrollHeight - outconsole.height()
+                        );
+                        // DO THA GLITCH :D
+                        autog_glitchhim();
+                    }
+                    
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/autoglitcher.pl?udid=" + ag_udid + "&game=" + ag_game + "&device=" + ag_device + "&method=check&sanctionedpuid=" + ag_usersanctioned,true);
+            xmlhttp.send();
+        }
+        
+        function autog_glitchhim(){
+            var ag_ID = document.autoglitch.ID.value;
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_invid = document.autoglitch.building.value;
+            var ag_usersanctioned = window.localStorage.getItem("SANCTION_PUID");
+            var ag_amountcanbuy = window.localStorage.getItem("ABLE_TO_BUY");
+            var ag_username = window.localStorage.getItem("my_username");
+            if(ag_amountcanbuy >= 1000){
+                window.localStorage.setItem("ABLE_TO_BUY", "1000");
+                var ag_amountcanbuy = "1000";
+            }
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+
+                        document.getElementById("autoglitchlog").innerHTML+=xmlhttp.responseText;
+                        var outconsole = $('#autoglitchlog');
+                        outconsole.scrollTop(
+                        outconsole[0].scrollHeight - outconsole.height()
+                        );
+                        autog_seller()
+                    
+                }
+            }
+
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/autoglitcher.pl?udid=" + ag_udid + "&game=" + ag_game + "&device=" + ag_device + "&method=glitch&puid=" + ag_usersanctioned + "&invid=" + ag_invid + "&qty=" + ag_amountcanbuy + "&ID=" + ag_ID + "&adid=" + document.uuid2.property2.value + "&username=" + ag_username,true);
+            xmlhttp.send();
+        }
+
+    
+
+function autog_seller() {
+    var ag_sellthem = window.localStorage.getItem("SELL_THEM");
+    var ag_amountcanbuy = window.localStorage.getItem("ABLE_TO_BUY");
+    var ag_udid = document.autoglitch.udid.value;
+    var ag_game = document.autoglitch.game.value;
+    var ag_device = document.autoglitch.device.value;
+    var ag_invid = document.autoglitch.building.value;
+    // window.localStorage.setItem("ABLE_TO_BUY", "1000");
+    
+    var dividends = ag_amountcanbuy / 10;
+    
+    if(ag_sellthem == "yes"){
+ autog_sellcomp1()
+    }
+    if(ag_sellthem == "no"){
+        doautoglitch();
+    }
+
+    
+}
+        
+        function autog_sellcomp1(){
+            var ag_sellthem = window.localStorage.getItem("SELL_THEM");
+            var ag_amountcanbuy = window.localStorage.getItem("ABLE_TO_BUY");
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_invid = document.autoglitch.building.value;
+            var dividends = ag_amountcanbuy / 10;
+            document.getElementById("autoglitchlog").innerHTML+="Selling 1 Begun&#13;&#10;";
+            var xmlhttp4;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp4=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp4=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp4.onreadystatechange=function()
+            {
+                if (xmlhttp4.readyState==4 && xmlhttp4.status==200)
+                {
+                    //text = "Sold " + i + "&#13;&#10;;
+                    document.getElementById("autoglitchlog").innerHTML+="Selling 1 Complete&#13;&#10;";
+                    document.getElementById("autoglitchlog").innerHTML+=xmlhttp4.responseText;
+                    var outconsole = $('#autoglitchlog');
+                    outconsole.scrollTop(
+                    outconsole[0].scrollHeight - outconsole.height()
+                    );
+                    autog_sellcomp2();
+                }
+            }
+            xmlhttp4.open("GET","http://www.gpglitcher.com/ajax/sellit.pl?udid=" + document.uuid2.property2.value + "&adid=" + ag_udid + "&device=" + ag_device + "&game=" + ag_game + "&invid=" + ag_invid + "&amt=" + dividends,true); /// 1 at a time!
+            xmlhttp4.send();
+        }
+        function autog_sellcomp2(){
+            var ag_sellthem = window.localStorage.getItem("SELL_THEM");
+            var ag_amountcanbuy = window.localStorage.getItem("ABLE_TO_BUY");
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_invid = document.autoglitch.building.value;
+            var dividends = ag_amountcanbuy / 10;
+            document.getElementById("autoglitchlog").innerHTML+="Selling 2 Begun&#13;&#10;";
+            var xmlhttp4;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp4=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp4=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp4.onreadystatechange=function()
+            {
+                if (xmlhttp4.readyState==4 && xmlhttp4.status==200)
+                {
+                    //text = "Sold " + i + "&#13;&#10;;
+                    document.getElementById("autoglitchlog").innerHTML+="Selling 2 Complete&#13;&#10;";
+                    document.getElementById("autoglitchlog").innerHTML+=xmlhttp4.responseText;
+                    var outconsole = $('#autoglitchlog');
+                    outconsole.scrollTop(
+                                         outconsole[0].scrollHeight - outconsole.height()
+                                         );
+                                         autog_sellcomp3();
+                }
+            }
+            xmlhttp4.open("GET","http://www.gpglitcher.com/ajax/sellit.pl?udid=" + document.uuid2.property2.value + "&adid=" + ag_udid + "&device=" + ag_device + "&game=" + ag_game + "&invid=" + ag_invid + "&amt=" + dividends,true); /// 1 at a time!
+            xmlhttp4.send();
+        }
+        function autog_sellcomp3(){
+            var ag_sellthem = window.localStorage.getItem("SELL_THEM");
+            var ag_amountcanbuy = window.localStorage.getItem("ABLE_TO_BUY");
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_invid = document.autoglitch.building.value;
+            var dividends = ag_amountcanbuy / 10;
+            document.getElementById("autoglitchlog").innerHTML+="Selling 3 Begun&#13;&#10;";
+            var xmlhttp4;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp4=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp4=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp4.onreadystatechange=function()
+            {
+                if (xmlhttp4.readyState==4 && xmlhttp4.status==200)
+                {
+                    //text = "Sold " + i + "&#13;&#10;;
+                    document.getElementById("autoglitchlog").innerHTML+="Selling 3 Complete&#13;&#10;";
+                    document.getElementById("autoglitchlog").innerHTML+=xmlhttp4.responseText;
+                    var outconsole = $('#autoglitchlog');
+                    outconsole.scrollTop(
+                                         outconsole[0].scrollHeight - outconsole.height()
+                                         );
+                                         autog_sellcomp4();
+                }
+            }
+            xmlhttp4.open("GET","http://www.gpglitcher.com/ajax/sellit.pl?udid=" + document.uuid2.property2.value + "&adid=" + ag_udid + "&device=" + ag_device + "&game=" + ag_game + "&invid=" + ag_invid + "&amt=" + dividends,true); /// 1 at a time!
+            xmlhttp4.send();
+        }
+        function autog_sellcomp4(){
+            var ag_sellthem = window.localStorage.getItem("SELL_THEM");
+            var ag_amountcanbuy = window.localStorage.getItem("ABLE_TO_BUY");
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_invid = document.autoglitch.building.value;
+            var dividends = ag_amountcanbuy / 10;
+            document.getElementById("autoglitchlog").innerHTML+="Selling 4 Begun&#13;&#10;";
+            var xmlhttp4;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp4=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp4=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp4.onreadystatechange=function()
+            {
+                if (xmlhttp4.readyState==4 && xmlhttp4.status==200)
+                {
+                    //text = "Sold " + i + "&#13;&#10;;
+                    document.getElementById("autoglitchlog").innerHTML+="Selling 4 Complete&#13;&#10;";
+                    document.getElementById("autoglitchlog").innerHTML+=xmlhttp4.responseText;
+                    var outconsole = $('#autoglitchlog');
+                    outconsole.scrollTop(
+                                         outconsole[0].scrollHeight - outconsole.height()
+                                         );
+                                         autog_sellcomp5();
+                }
+            }
+            xmlhttp4.open("GET","http://www.gpglitcher.com/ajax/sellit.pl?udid=" + document.uuid2.property2.value + "&adid=" + ag_udid + "&device=" + ag_device + "&game=" + ag_game + "&invid=" + ag_invid + "&amt=" + dividends,true); /// 1 at a time!
+            xmlhttp4.send();
+        }
+        function autog_sellcomp5(){
+            var ag_sellthem = window.localStorage.getItem("SELL_THEM");
+            var ag_amountcanbuy = window.localStorage.getItem("ABLE_TO_BUY");
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_invid = document.autoglitch.building.value;
+            var dividends = ag_amountcanbuy / 10;
+            document.getElementById("autoglitchlog").innerHTML+="Selling 5 Begun&#13;&#10;";
+            var xmlhttp4;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp4=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp4=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp4.onreadystatechange=function()
+            {
+                if (xmlhttp4.readyState==4 && xmlhttp4.status==200)
+                {
+                    //text = "Sold " + i + "&#13;&#10;;
+                    document.getElementById("autoglitchlog").innerHTML+="Selling 5 Complete&#13;&#10;";
+                    document.getElementById("autoglitchlog").innerHTML+=xmlhttp4.responseText;
+                    var outconsole = $('#autoglitchlog');
+                    outconsole.scrollTop(
+                                         outconsole[0].scrollHeight - outconsole.height()
+                                         );
+                                         autog_sellcomp6();
+                }
+            }
+            xmlhttp4.open("GET","http://www.gpglitcher.com/ajax/sellit.pl?udid=" + document.uuid2.property2.value + "&adid=" + ag_udid + "&device=" + ag_device + "&game=" + ag_game + "&invid=" + ag_invid + "&amt=" + dividends,true); /// 1 at a time!
+            xmlhttp4.send();
+        }
+        function autog_sellcomp6(){
+            var ag_sellthem = window.localStorage.getItem("SELL_THEM");
+            var ag_amountcanbuy = window.localStorage.getItem("ABLE_TO_BUY");
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_invid = document.autoglitch.building.value;
+            var dividends = ag_amountcanbuy / 10;
+            document.getElementById("autoglitchlog").innerHTML+="Selling 6 Begun&#13;&#10;";
+            var xmlhttp4;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp4=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp4=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp4.onreadystatechange=function()
+            {
+                if (xmlhttp4.readyState==4 && xmlhttp4.status==200)
+                {
+                    //text = "Sold " + i + "&#13;&#10;;
+                    document.getElementById("autoglitchlog").innerHTML+="Selling 6 Complete&#13;&#10;";
+                    document.getElementById("autoglitchlog").innerHTML+=xmlhttp4.responseText;
+                    var outconsole = $('#autoglitchlog');
+                    outconsole.scrollTop(
+                                         outconsole[0].scrollHeight - outconsole.height()
+                                         );
+                                         autog_sellcomp7();
+                }
+            }
+            xmlhttp4.open("GET","http://www.gpglitcher.com/ajax/sellit.pl?udid=" + document.uuid2.property2.value + "&adid=" + ag_udid + "&device=" + ag_device + "&game=" + ag_game + "&invid=" + ag_invid + "&amt=" + dividends,true); /// 1 at a time!
+            xmlhttp4.send();
+        }
+        function autog_sellcomp7(){
+            var ag_sellthem = window.localStorage.getItem("SELL_THEM");
+            var ag_amountcanbuy = window.localStorage.getItem("ABLE_TO_BUY");
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_invid = document.autoglitch.building.value;
+            var dividends = ag_amountcanbuy / 10;
+            document.getElementById("autoglitchlog").innerHTML+="Selling 7 Begun&#13;&#10;";
+            var xmlhttp4;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp4=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp4=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp4.onreadystatechange=function()
+            {
+                if (xmlhttp4.readyState==4 && xmlhttp4.status==200)
+                {
+                    //text = "Sold " + i + "&#13;&#10;;
+                    document.getElementById("autoglitchlog").innerHTML+="Selling 7 Complete&#13;&#10;";
+                    document.getElementById("autoglitchlog").innerHTML+=xmlhttp4.responseText;
+                    var outconsole = $('#autoglitchlog');
+                    outconsole.scrollTop(
+                                         outconsole[0].scrollHeight - outconsole.height()
+                                         );
+                                         autog_sellcomp8();
+                }
+            }
+            xmlhttp4.open("GET","http://www.gpglitcher.com/ajax/sellit.pl?udid=" + document.uuid2.property2.value + "&adid=" + ag_udid + "&device=" + ag_device + "&game=" + ag_game + "&invid=" + ag_invid + "&amt=" + dividends,true); /// 1 at a time!
+            xmlhttp4.send();
+        }
+        function autog_sellcomp8(){
+            var ag_sellthem = window.localStorage.getItem("SELL_THEM");
+            var ag_amountcanbuy = window.localStorage.getItem("ABLE_TO_BUY");
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_invid = document.autoglitch.building.value;
+            var dividends = ag_amountcanbuy / 10;
+            document.getElementById("autoglitchlog").innerHTML+="Selling 8 Begun&#13;&#10;";
+            var xmlhttp4;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp4=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp4=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp4.onreadystatechange=function()
+            {
+                if (xmlhttp4.readyState==4 && xmlhttp4.status==200)
+                {
+                    //text = "Sold " + i + "&#13;&#10;;
+                    document.getElementById("autoglitchlog").innerHTML+="Selling 8 Complete&#13;&#10;";
+                    document.getElementById("autoglitchlog").innerHTML+=xmlhttp4.responseText;
+                    var outconsole = $('#autoglitchlog');
+                    outconsole.scrollTop(
+                                         outconsole[0].scrollHeight - outconsole.height()
+                                         );
+                                         autog_sellcomp9();
+                }
+            }
+            xmlhttp4.open("GET","http://www.gpglitcher.com/ajax/sellit.pl?udid=" + document.uuid2.property2.value + "&adid=" + ag_udid + "&device=" + ag_device + "&game=" + ag_game + "&invid=" + ag_invid + "&amt=" + dividends,true); /// 1 at a time!
+            xmlhttp4.send();
+        }
+        function autog_sellcomp9(){
+            var ag_sellthem = window.localStorage.getItem("SELL_THEM");
+            var ag_amountcanbuy = window.localStorage.getItem("ABLE_TO_BUY");
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_invid = document.autoglitch.building.value;
+            var dividends = ag_amountcanbuy / 10;
+            document.getElementById("autoglitchlog").innerHTML+="Selling 9 Begun&#13;&#10;";
+            var xmlhttp4;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp4=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp4=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp4.onreadystatechange=function()
+            {
+                if (xmlhttp4.readyState==4 && xmlhttp4.status==200)
+                {
+                    //text = "Sold " + i + "&#13;&#10;;
+                    document.getElementById("autoglitchlog").innerHTML+="Selling 9 Complete&#13;&#10;";
+                    document.getElementById("autoglitchlog").innerHTML+=xmlhttp4.responseText;
+                    var outconsole = $('#autoglitchlog');
+                    outconsole.scrollTop(
+                                         outconsole[0].scrollHeight - outconsole.height()
+                                         );
+                                         autog_sellcomp10();
+                }
+            }
+            xmlhttp4.open("GET","http://www.gpglitcher.com/ajax/sellit.pl?udid=" + document.uuid2.property2.value + "&adid=" + ag_udid + "&device=" + ag_device + "&game=" + ag_game + "&invid=" + ag_invid + "&amt=" + dividends,true); /// 1 at a time!
+            xmlhttp4.send();
+        }
+        function autog_sellcomp10(){
+            var ag_sellthem = window.localStorage.getItem("SELL_THEM");
+            var ag_amountcanbuy = window.localStorage.getItem("ABLE_TO_BUY");
+            var ag_udid = document.autoglitch.udid.value;
+            var ag_game = document.autoglitch.game.value;
+            var ag_device = document.autoglitch.device.value;
+            var ag_invid = document.autoglitch.building.value;
+            var dividends = ag_amountcanbuy / 10;
+            document.getElementById("autoglitchlog").innerHTML+="Selling 10 Begun&#13;&#10;";
+            var xmlhttp4;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp4=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp4=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp4.onreadystatechange=function()
+            {
+                if (xmlhttp4.readyState==4 && xmlhttp4.status==200)
+                {
+                    //text = "Sold " + i + "&#13;&#10;;
+                    document.getElementById("autoglitchlog").innerHTML+="Selling 10 Complete&#13;&#10;";
+                    document.getElementById("autoglitchlog").innerHTML+=xmlhttp4.responseText;
+                    var outconsole = $('#autoglitchlog');
+                    outconsole.scrollTop(
+                                         outconsole[0].scrollHeight - outconsole.height()
+                                         );
+                                         doautoglitch(); //// because we already have a deathchaser.
+                                         //// login, cash, owned, buyabe, hitlist, chest.
+                }
+            }
+            xmlhttp4.open("GET","http://www.gpglitcher.com/ajax/sellit.pl?udid=" + document.uuid2.property2.value + "&adid=" + ag_udid + "&device=" + ag_device + "&game=" + ag_game + "&invid=" + ag_invid + "&amt=" + dividends,true); /// 1 at a time!
+            xmlhttp4.send();
+        }
+            ////
+            /////
+            //////
+            /////// END AUTO GLITCH FUNCTION ROUTINE
+            function openautoglitcher(acc_id){
+                $("#scroller").fadeOut();
+                var xmlhttp;
+                if (window.XMLHttpRequest)
+                {
+                    xmlhttp=new XMLHttpRequest();
+                }
+                else
+                {
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                        document.getElementById("scroller").innerHTML=xmlhttp.responseText;
+                        $("#scroller").fadeIn();
+                        myScroll.scrollToElement("#item", "1s");
+                    }
+                }
+                xmlhttp.open("GET","http://www.gpglitcher.com/ajax/autoglitch.pl?udid=" + document.uuid2.property2.value + "&ID=" + acc_id,true);
+                xmlhttp.send();
+                
+            }
+        
+            function cleanitup(){
+                $("#scroller").fadeOut();
+                /// set udid = bla where username = my_username
+                window.localStorage.clear();
+                document.write("<link rel='stylesheet' type='text/css' href='css/global.css'/><center><BR><h3>CLEANED!</h3><br>");
+                $("#scroller").fadeIn();
+            }
+            
+            
+            
+            function calcdata(){
+                var xmlhttp;
+                if (window.XMLHttpRequest)
+                {
+                    xmlhttp=new XMLHttpRequest();
+                }
+                else
+                {// code for IE6, IE5
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                        document.getElementById("hiddencalc").innerHTML=xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","http://www.gpglitcher.com/ajax/" + document.doglitch.game.value + "_calc.php?buildings=" + document.calcdatat.buildings.value + "&owned=" + document.calcdatat.owned.value + "&amount=" + document.calcdatat.amount.value,true);
+                xmlhttp.send();
+                
+            }
+            
+            function getcalcinfo(){
+                var xmlhttp;
+                if (window.XMLHttpRequest)
+                {
+                    xmlhttp=new XMLHttpRequest();
+                }
+                else
+                {// code for IE6, IE5
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                        document.getElementById("hiddencalc").innerHTML=xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","http://www.gpglitcher.com/ajax/" + document.doglitch.game.value + "_calc.php",true);
+                xmlhttp.send();
+                
+            }
+            
+            function beginsell(){
+                
+                /// have to write somewhere "selling has begun
+                popupstartsell();
+                
+                var xmlhttp;
+                if (window.XMLHttpRequest)
+                {
+                    xmlhttp=new XMLHttpRequest();
+                }
+                else
+                {// code for IE6, IE5
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4)
+                    {
+                        popupdonesell();
+                    }
+                }
+                xmlhttp.open("GET","http://www.gpglitcher.com/ajax/sellit.pl?udid=" + document.uuid2.property2.value + "&adid=" + document.doglitch.udid.value + "&device=" + document.doglitch.device.value + "&game=" + document.doglitch.game.value + "&invid=" + document.sellit.build.value + "&amt=" + document.sellit.amount.value,true);
+                xmlhttp.send();
+                
+            }
+            
+            function findseek(){
+                findseekaa();
+                setTimeout(findseekaa,3000);
+            }
+            
+            function findseekaa(){
+                document.getElementById("seeklog").innerHTML+= "Searching...&#13;&#10;";
+                
+                $.ajax({
+                       type:"POST",
+                       url: "http://www.gpglitcher.com/ajax/seeker.pl",
+                       data:
+                       {
+                       udid:"" + document.seekit.udid.value + "",
+                       device:"" + document.seekit.device.value + "",
+                       game:"" + document.seekit.game.value + "",
+                       deaths:"" + document.seekit.deaths.value + "",
+                       },
+                       /// Rather then getting the text/html of response page:
+                       /// seeker.pl will send out diff headers depending on event.
+                       /// header codes are processed here,
+                       
+                       /// 500 (int server) not working (no cross origin access
+                       /// doesnt matter, shouldn't give error 500 tho
+                       statusCode: {
+                       405: function() {
+                       document.getElementById("seeklog").innerHTML+= "Not enough deaths...&#13;&#10;";
+                       var outconsole = $('#seeklog');
+                       outconsole.scrollTop(
+                                            outconsole[0].scrollHeight - outconsole.height()
+                                            );
+                       setTimeout(findseekaa,1000);
+                       },
+                       403: function() {
+                       document.getElementById("seeklog").innerHTML+= "Death chaser already listed...&#13;&#10;";
+                       var outconsole = $('#seeklog');
+                       outconsole.scrollTop(
+                                            outconsole[0].scrollHeight - outconsole.height()
+                                            );
+                       setTimeout(findseekaa,1000);
+                       },
+                       500: function() {
+                       document.getElementById("seeklog").innerHTML+= "Not enough deaths...&#13;&#10;";
+                       var outconsole = $('#seeklog');
+                       outconsole.scrollTop(
+                                            outconsole[0].scrollHeight - outconsole.height()
+                                            );
+                       setTimeout(findseekaa,1000);
+                       },
+                       200: function() {
+                       document.getElementById("seeklog").innerHTML+= "Found and sanctioned deathchaser!!!&#13;&#10;";
+                       var outconsole = $('#seeklog');
+                       outconsole.scrollTop(
+                                            outconsole[0].scrollHeight - outconsole.height()
+                                            );
+                       }
+                       }
+                       });
+                       
+            };
+        
+        
+        
+        function registerthatguy(){
+            var my_username = window.localStorage.getItem("my_username");
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("register_resp").innerHTML=xmlhttp.responseText;
+                }
+            }
+            
+            var base64_email = btoa(document.register_thatguy.email.value);
+            // console.log(base64_email);
+            
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/valid.pl?udid=" + document.uuid2.property2.value + "&myusername=" + my_username + "&username=" + document.register_thatguy.usernameq.value + "&password=" + document.register_thatguy.passwordq.value + "&email=" + base64_email + "&method=register",true);
+            xmlhttp.send();
+            
+        }
+        
+        
+        
+        function get_newsfeed_users(){
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("usernewsfeed").innerHTML=xmlhttp.responseText;
+                    
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/ajaxnewsfeed.pl?adid=" + document.uuid2.property2.value + "&udid=" + document.doglitch.udid.value + "&device=" + document.doglitch.device.value + "&name=" + document.doglitch.udid.value + "&game=" + document.doglitch.game.value + "&ID=" + document.doglitch.ID.value,true);
+            xmlhttp.send();
+            
+        }
+        
+        
+        
+        
+        
+        function do_glitch_NAN() {
+            
+            $.post("http://www.gpglitcher.com/ajax/tool.pl",
+                   {
+                   adid:"" + document.uuid2.property2.value + "",
+                   udid:"" + document.doglitch.udid.value + "",
+                   device:"" + document.doglitch.device.value + "",
+                   type:"1",
+                   name:"" + document.doglitch.udid.value + "",
+                   game:"" + document.doglitch.game.value + "",
+                   puid:"" + document.doglitch.puid.value + "",
+                   invid:"" + document.doglitch.invid.value + "",
+                   qty:"" + document.doglitch.qty.value + "",
+                   ID:"" + document.doglitch.ID.value + "",
+                   }
+                   
+                   
+                   );
+        };
+        
+        
+        function do_glitch(){
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("resultglitch").innerHTML+= "x" + document.doglitch.qty.value + " Buildings" + xmlhttp.responseText;
+                    
+                    var psconsole = $('#resultglitch');
+                    psconsole.scrollTop(
+                                        psconsole[0].scrollHeight - psconsole.height()
+                                        );
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/ajaxtool.pl?adid=" + document.uuid2.property2.value + "&udid=" + document.doglitch.udid.value + "&device=" + document.doglitch.device.value + "&name=" + document.doglitch.udid.value + "&game=" + document.doglitch.game.value + "&puid=" + document.doglitch.puid.value + "&invid=" + document.doglitch.invid.value + "&qty=" + document.doglitch.qty.value + "&ID=" + document.doglitch.ID.value,true);
+            xmlhttp.send();
+            
+            setTimeout(get_newsfeed_users,500);
+            gamehomey();
+            
+        }
+        
+        
+        
+        function showdeathseeker(){
+            $("#hiddenseeker").toggleClass( "hidden" );
+        }
+        function showtodolist(){
+            $("#hiddentodolist").toggleClass( "hidden" );
+        }
+        
+        function showheal(game_type){
+            $("#hiddenhealer").toggleClass( "hidden" );
+            heal(game_type);
+        }
+        
+        
+        function showcalc(){
+            getcalcinfo();
+            $("#hiddencalc").toggleClass( "hidden" );
+            
+        }
+        
+        function heal(game_type){
+            document.getElementById('heal').innerHTML = '<iframe src="heal/' + game_type + '.html" width="1px" height="1px" frameBorder="0"></iframe>';
+        }
+        
+        
+        function openglitcher(acc_id){
+            $("#scroller").fadeOut();
+            var gamer_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("scroller").innerHTML=xmlhttp.responseText;
+                    $("#scroller").fadeIn();
+                    gamehome();
+                    myScroll.scrollToElement("#item", "1s");
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/tool.pl?adid=" + document.uuid2.property2.value + "&ID=" + acc_id + "&width=" + gamer_width,true);
+            xmlhttp.send();
+            
+            
+        }
+        
+        
+        function autoaddme() {
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("deadend").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/autoadd.pl?udid=" + document.uuid2.property2.value + "&game=" + document.autoaddinfo.game.value + "&code=" + document.autoaddinfo.code.value + "&adid=" + document.autoaddinfo.adid.value,true);
+            xmlhttp.send();
+            
+            writeadding();
+            
+        };
+        function writeadding() {
+            
+            document.getElementById('accountaddlog').innerHTML += ' "' + document.autoaddinfo.code.value + '" has been added... &#13;&#10;';
+            setTimeout(writeadding,1500);
+            
+            
+        }
+        
+        
+        function deletemissionnum(clicked_one) {
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("deadend").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/deletemission.pl?udid=" + document.uuid2.property2.value + "&ID=" + clicked_one,true);
+            xmlhttp.send();
+            popupdel();
+            
+        };
+        
+        function addtomission() {
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("missionresponse").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/addmission.pl?udid=" + document.uuid2.property2.value + "&game=" + document.addaccount.game.value + "&name=" + document.addaccount.name.value + "&adid=" + document.addaccount.udid.value + "&mission=" + document.addaccount.mission.value + "&time=" + document.addaccount.time.value,true);
+            xmlhttp.send();
+        };
+        
+        function getmissionlist(){
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("getmissionfromgame").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/missionlist.pl?udid=" + document.uuid2.property2.value + "&game=" + document.addaccount.game.value,true);
+            xmlhttp.send();
+            
+        };
+        
+        
+        
+        function makeit(){
+            beginmakeit();
+            document.getElementById('log').innerHTML += ' "' + document.leveladdit.hiddenname.value + '" is being made...&#13;&#10;';
+            setTimeout(writedone,50000);
+        }
+        function writedone() {
+            document.getElementById('log').innerHTML += ' "' + document.leveladdit.hiddenname.value + '" Looks to be done...&#13;&#10;';
+        }
+        
+        function beginmakeit(){
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("get" + tapped_id).innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/level6/" + document.leveladdit.gametype.value + ".pl?udid=" + document.uuid2.property2.value + "&name=" + document.leveladdit.hiddenname.value,true);
+            xmlhttp.send();
+            normalize();
+            
+        };
+        function showseller(){
+            $("#hiddenseller").toggleClass( "hidden" );
+        }
+        function showuseragent(){
+            $("#hiddenuseragent").toggleClass( "hidden" );
+        }
+        function showudid(){
+            $("#hiddenudid").toggleClass( "hidden" );
+        }
+        
+        function exporty(){
+            $("#exportarea").toggleClass( "hidden" );
+        }
+        
+        function beginit(that_id){
+            $("#nopeclc1" + that_id).fadeToggle();
+            $("#nopeclc1" + that_id).toggleClass( "hidden" );
+            $("#nopeclc2" + that_id).fadeToggle();
+            $("#nopeclc2" + that_id).toggleClass( "hidden" );
+            $("#nopeclc3" + that_id).fadeToggle();
+            $("#nopeclc3" + that_id).toggleClass( "hidden" );
+            $("#nopeclc4" + that_id).fadeToggle();
+            $("#nopeclc4" + that_id).toggleClass( "hidden" );
+        }
+        
+        function leveladd() {
+            $("#hiddenspan").toggleClass( "hidden" );
+        }
+        function missionadd() {
+            $("#missionaddaccount").toggleClass( "hidden" );
+        }
+        function viewmission() {
+            $("#missionviewlist").toggleClass( "hidden" );
+        }
+        
+        
+        function viewlevel() {
+            $("#hiddenspan2").toggleClass( "hidden" );
+        }
+        function autoaddhide() {
+            $("#autoaddudid").toggleClass( "hidden" );
+        }
+        
+        function getaccinfo(tapped_id)
+        {
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("get" + tapped_id).innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/accinfo.pl?udid=" + document.uuid2.property2.value + "&ID=" + tapped_id,true);
+            xmlhttp.send();
+            
+            
+            
+            
+        }
+        
+        
+        function spark()
+        {
+            document.getElementById("scroller").innerHTML='<BR><BR><BR><center><font color="white">Downloading Data...</font>';
+        }
+        
+        function updatepass()
+        {
+            var my_username = window.localStorage.getItem("username");
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("resultpass").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/valid.pl?udid=" + document.uuid2.property2.value + "&newpass=" + document.passchange.pass.value + "&method=changepassword&username=" + my_username + "&password=" + document.passchange.pass.value,true);
+            xmlhttp.send();
+            
+            
+            
+            
+        }
+        
+        function showusers()
+        {
+            
+            document.getElementById('scroller').innerHTML = '<iframe src="http://gpglitcher.com/ajax/users.pl?udid=' + document.uuid2.property2.value + '&method=userlist" width="100%" height="1200px" frameBorder="0" ></iframe>';
+            
+        }
+        
+        
+        function getdevice() {
+            document.getElementById("srty").value = document.getElementById("makedevice").value;
+        }
+        function getgame() {
+            document.getElementById("srti").value = document.getElementById("makegame").value;
+        }
+        
+        
+        function ajaxadd(acc_id,udid)
+        {
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("deadend").innerHTML=xmlhttp.responseText;
+                    main();
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/add.pl?udid=" + document.uuid2.property2.value + "&adid=" + document.makeaccount.makeudid.value + "&name=" + document.makeaccount.makename.value + "&game=" + document.getElementById("makegame").value + "&device=" + document.getElementById("makedevice").value,true);
+            xmlhttp.send();
+            
+            normalize();
+            setkey(acc_id,udid);
+            
+        }
+        
+        function ajaxdelete(clicked_id)
+        {
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("listed").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/delete.pl?udid=" + document.uuid2.property2.value + "&ID=" + clicked_id,true);
+            xmlhttp.send();
+            
+            update2(clicked_id);
+            
+            
+        }
+        
+        
+        
+        function styling() {
+            setTimeout(style, 1000);
+        }
+        
+        function style()
+        {
+            if( /Android|iPhone|iPod/i.test(navigator.userAgent) ) {
+                document.getElementById("conditional_style").innerHTML="<style> input[type='text'],input[type='tel'],input[type='password'] { border-radius:5px; font-weight:bold; height:18px; width:120px; border:1px solid #000080; color:#000080; padding:2 2 2 2; font-size:100%;text-align:center; } </style>";
+            }
+            if( /iPad|tablet/i.test(navigator.userAgent) ) {
+                document.getElementById("conditional_style").innerHTML="<style> input[type='text'],input[type='tel'],input[type='password'] { border-radius:5px; font-weight:bold; height:30px; width:200px; border:1px solid #000080; color:#000080; padding:2 2 2 2; font-size:100%;text-align:center; } </style>";
+            }
+            
+            var background_value = window.localStorage.getItem("background");
+            document.getElementById("backgroundNADA").innerHTML=background_value;
+            
+        }
+        
+        /*
+        (function learn()
+         {
+         var xmlhttp;
+         if (window.XMLHttpRequest)
+         {// code for IE7+, Firefox, Chrome, Opera, Safari
+         xmlhttp=new XMLHttpRequest();
+         }
+         else
+         {// code for IE6, IE5
+         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+         }
+         xmlhttp.onreadystatechange=function()
+         {
+         if (xmlhttp.readyState==4 && xmlhttp.status==200)
+         {
+         document.getElementById("version").innerHTML=xmlhttp.responseText;
+         }
+         }
+         xmlhttp.open("GET","http://www.gpglitcher.com/ajax/version.pl?udid=" + document.uuid2.property2.value + "&release=A&version=" + document.current.version.value,true);
+         xmlhttp.send();
+         
+         })();
+         */
+
+
+(function permission() {
+ var hash_key = window.localStorage.getItem("THE_HASH");
+ var version = window.localStorage.getItem("VERSION");
+ 
+ $.ajax({
+ type:"POST",
+ url: "http://www.gpglitcher.com/ajax/ping.pl",
+ data:
+ {
+ udid: hash_key,
+ version: version,
+ },
+ statusCode: {
+ 405: function() {
+ window.open("hash.html");
+ },
+ 402: function() {
+ window.open("update.html");
+ },
+ 404: function() {
+ window.open("ban.html");
+ },
+ 403: function() {
+ maintenance();
+ },
+ 500: function() {
+ maintenance();
+ },
+ 200: function() {
+// do nothing
+ }
+ },
+ success : function(text)
+ {
+ var response = text;
+ }
+ });
+ setTimeout(permission,30000);
+ }
+ )();
+
+            </script>
+        
+        <!---  <div id="bannerr"/><p class="title">iPac-MG&nbsp;&nbsp;&nbsp;&nbsp;vs: <span id="version"></span></p></div> --->
+        
+        
+        <!---- Begin De Functions ---->
+        
+        <!--- ?udid will get udid from cordova --->
+        
+        <!--- + document.form1.uuid.value--->
+        <script type="text/javascript">
+            function news() {
+                setTimeout(tonews, 1000);
+            }
+        
+        function tonews()
+        {
+            var my_username = window.localStorage.getItem("my_username");
+            var did_notice = window.localStorage.getItem("NOTICE");
+            $("#scroller").fadeOut();
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    
+                    document.getElementById("scroller").innerHTML=xmlhttp.responseText;
+                    $("#scroller").fadeIn();
+                    if(typeof did_notice === 'null'){
+                        popup_notice();
+                    window.localStorage.setItem("NOTICE", "SEEN IT");
+                    }
+                    
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/news.pl?udid=" + document.uuid2.property2.value + "&version=" + document.current.version.value + "&username=" + my_username,true);
+            xmlhttp.send();
+        };
+        
+        
+        function main()
+        {
+            $("#scroller").fadeOut();
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+            
+document.getElementById("scroller").innerHTML=xmlhttp.responseText;
+$("#scroller").fadeIn();
+myScroll.scrollToElement("#view", "1s");
+
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/main.pl?udid=" + document.uuid2.property2.value,true);
+            xmlhttp.send();
+        };
+        
+        function autos()
+        {
+            $("#scroller").fadeOut();
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("scroller").innerHTML=xmlhttp.responseText;
+                    $("#scroller").fadeIn();
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/autos.pl?udid=" + document.uuid2.property2.value,true);
+            xmlhttp.send();
+        };
+        
+        function session()
+        {
+            window.localStorage.setItem("background", "<img src='images/WATER.png' id='background'></img>");
+            window.localStorage.setItem("my_username", document.form1.username.value);
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("intern").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/valid.pl?method=login&username=" + document.form1.username.value + "&password=" + document.form1.password.value + "&udid=" + document.uuid2.property2.value,true);
+            xmlhttp.send();
+        };
+        
+        function ajaxsettings()
+        {
+            $("#scroller").fadeOut();
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("scroller").innerHTML=xmlhttp.responseText;
+                    $("#scroller").fadeIn();
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/settings.pl?udid=" + document.uuid2.property2.value + "&version=" + document.current.version.value,true);
+            xmlhttp.send();
+        };
+        
+        function getlist() {
+            setTimeout(dolist, 1000);
+            
+        }
+        
+        function dolist()
+        {
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("listed").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/list.pl?udid=" + document.uuid2.property2.value,true);
+            xmlhttp.send();
+            
+            
+        }
+        function updatebg(){
+
+            $("#backgroundNADA").fadeOut();
+            
+            var theurl = "<img src='" + document.getElementById("bglister").value + "' id='background'></img>";
+            
+            window.localStorage.setItem("background", theurl);
+            /// get the "src"
+            var background_value = window.localStorage.getItem("background");
+            /// transition it here.
+            document.getElementById("backgroundNADA").innerHTML=background_value;
+            $("#backgroundNADA").fadeIn();
+        }
+        
+        
+        function updatebg_OLD()
+        {
+            
+            
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("bgset").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","http://www.gpglitcher.com/ajax/updatebg.pl?udid=" + document.uuid2.property2.value + "&src=" + document.getElementById("bglister").value,true);
+            xmlhttp.send();
+            
+            setTimeout(style, 1000);
+            
+            
+        }
+        
+        
+        function run() {
+            document.getElementById("srt").value = document.getElementById("bglister").value;
+        }
+        
+        
+        function download()
+        {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+        
+        function downloadFile(){
+            window.requestFileSystem(
+                                     LocalFileSystem.PERSISTENT, 0,
+                                     function onFileSystemSuccess(fileSystem) {
+                                     fileSystem.root.getFile(
+                                                             "dummy.html", {create: true, exclusive: false},
+                                                             function gotFileEntry(fileEntry){
+                                                             var sPath = fileEntry.fullPath.replace("dummy.html","");
+                                                             var fileTransfer = new FileTransfer();
+                                                             fileEntry.remove();
+                                                             
+                                                             fileTransfer.download(
+                                                                                   "" + document.form1.url.value + "",
+                                                                                   sPath + "" + document.form1.name.value + ".png",
+                                                                                   function(theFile) {
+                                                                                   console.log("download complete: " + theFile.toURI());
+                                                                                   showLink(theFile.toURI());
+                                                                                   },
+                                                                                   function(error) {
+                                                                                   console.log("download error source " + error.source);
+                                                                                   console.log("download error target " + error.target);
+                                                                                   console.log("upload error code: " + error.code);
+                                                                                   }
+                                                                                   );
+                                                             },
+                                                             fail);
+                                     },
+                                     fail);
+                                     
+        }
+        
+        function showLink(url){
+            
+            
+            $.post("http://www.gpglitcher.com/ajax/photo.pl",
+                   {
+                   udid:"" + document.uuid2.property2.value + "",
+                   src:"" + url + "",
+                   name:"" + document.form1.name.value + ""
+                   },
+                   function(data,status){
+                   popup();
+                   });
+                   setTimeout(dolist, 1000);
+                   
+        }
+        
+        
+        function fail(evt) {
+            console.log(evt.target.error.code);
+        }
+        
+        function onDeviceReady()
+        {
+            
+            downloadFile();
+        }
+        
+        
+        
+            </script>
+        <script type="text/javascript">
+            var oldseqt = '';
+            function popup_notice()
+            {
+                var textareaqt = document.fseqt.taseqt;
+                var dseqt = parent.dynamicframeseqt.document;
+                
+                oldseqt = textareaqt.value;
+                dseqt.open();
+                dseqt.write(oldseqt);
+                dseqt.close();
+            }
+        </script>
+        
+        
+        
+        <form name="fseqt" method="post" target="dynamicframeseqt">
+            <!-- deleted -->
+            
+            <div style='display:none;'>
+                <script type="text/javascript">edToolbarseqt('canvasseqt');</script>
+                <textarea id="canvasseqt" name="taseqt" rows="0" cols="0">
+                    <script>
+                        (function myFunction() {
+                         alert("Please note, iOS UDIDs on iOS-5 or bellow are only supported, even those UDIDs are depreciated on this application. You will need to transfer your account to a ANDROID UDID inorder to use most of the functions on this application.");
+                         })();
+                        </script>
+                </textarea>
+                </form>
+        <iframe name="dynamicframeseqt" id="dynamicframeseqt" src="javascript:'-'"></iframe>
+        </div>
+        
+        
+        
+        
+        <script type="text/javascript">
+            var oldseq = '';
+            function popupstartsell()
+            {
+                var textareaq = document.fseq.taseq;
+                var dseq = parent.dynamicframeseq.document;
+                
+                oldseq = textareaq.value;
+                dseq.open();
+                dseq.write(oldseq);
+                dseq.close();
+            }
+        </script>
+        
+        
+        
+        <form name="fseq" method="post" target="dynamicframeseq">
+            <!-- deleted -->
+            
+            <div style='display:none;'>
+                <script type="text/javascript">edToolbarseq('canvasseq');</script>
+                <textarea id="canvasseq" name="taseq" rows="0" cols="0">
+                    <script>
+                        (function myFunction() {
+                         alert("Selling has begun, A popup will notify when selling has completed. Notice: Never glitch while selling is occuring!");
+                         })();
+                        </script>
+                </textarea>
+                </form>
+        <iframe name="dynamicframeseq" id="dynamicframeseq" src="javascript:'-'"></iframe>
+        </div>
+        
+        
+        
+        
+        
+        <script type="text/javascript">
+            var oldse = '';
+            function popupdonesell()
+            {
+                var textarea = document.fse.tase;
+                var dse = parent.dynamicframese.document;
+                
+                oldse = textarea.value;
+                dse.open();
+                dse.write(oldse);
+                dse.close();
+            }
+        </script>
+        
+        
+        
+        <form name="fse" method="post" target="dynamicframese">
+            <!-- deleted -->
+            
+            <div style='display:none;'>
+                <script type="text/javascript">edToolbarse('canvasse');</script>
+                <textarea id="canvasse" name="tase" rows="0" cols="0">
+                    <script>
+                        (function myFunction() {
+                         alert("It appears buildings have completed selling!");
+                         })();
+                        </script>
+                </textarea>
+                </form>
+        <iframe name="dynamicframese" id="dynamicframese" src="javascript:'-'"></iframe>
+        </div>
+        
+        
+        
+        
+        
+        <script type="text/javascript">
+            var old = '';
+            function popup()
+            {
+                var textarea = document.f.ta;
+                var d = parent.dynamicframe.document;
+                
+                old = textarea.value;
+                d.open();
+                d.write(old);
+                d.close();
+                
+                window.setTimeout(update, 150);
+            }
+        </script>
+        
+        
+        
+        <form name="f" method="post" target="dynamicframe">
+            <!-- deleted -->
+            
+            <div style='display:none;'>
+                <script type="text/javascript">edToolbar('canvas');</script>
+                <textarea id="canvas" name="ta" rows="0" cols="0">
+                    <script>
+                        (function myFunction() {
+                         alert("Photo Successfuly downloaded!");
+                         dolist();
+                         })();
+                        </script>
+                </textarea>
+                </form>
+        <iframe name="dynamicframe" id="dynamicframe" src="javascript:'-'"></iframe>
+        </div>
+        
+        <script type="text/javascript">
+            var old2 = '';
+            function update2()
+            {
+                var textarea = document.f2.ta2;
+                var d2 = parent.dynamicframe2.document;
+                
+                old2 = textarea.value;
+                d2.open();
+                d2.write(old2);
+                d2.close();
+                main(setTimeout, 10);
+                
+            }
+        
+            </script>
+        </head>
+       
+        
+        <form name="f2" method="post" target="dynamicframe2">
+            <!-- deleted -->
+            
+            <div style='display:none;'>
+                <script type="text/javascript">edToolbar2('canvas2');</script>
+                <textarea id="canvas2" name="ta2" rows="0" cols="0">
+                    <script>
+                        (function MEEPFunction() {
+                         alert("Account Deleted");
+                         })();
+                        </script>
+                </textarea>
+                </form>
+        <iframe name="dynamicframe2" id="dynamicframe2" src="javascript:'-'"></iframe>
+        </div>
+        
+        <script type="text/javascript">
+            var old3 = '';
+            function nointernet()
+            {
+                var textarea = document.f3.ta3;
+                var d3 = parent.dynamicframe3.document;
+                
+                old3 = textarea.value;
+                d3.open();
+                d3.write(old3);
+                d3.close();
+                main(setTimeout, 1000);
+                
+            }
+        
+            </script>
+        </head>
+        
+        <form name="f3" method="post" target="dynamicframe3">
+            <!-- deleted -->
+            
+            <div style='display:none;'>
+                <script type="text/javascript">edToolbar3('canvas3');</script>
+                <textarea id="canvas3" name="ta3" rows="0" cols="0">
+                    <script>
+                        (function MEEPFunction() {
+                         alert("No internet access");
+                         })();
+                        </script>
+                </textarea>
+                </form>
+        <iframe name="dynamicframe3" id="dynamicframe3" src="javascript:'-'"></iframe>
+        </div>
+        
+        
+        
+        <!---ABC--->
+        <script type="text/javascript">
+            var old4 = '';
+            function popupdel()
+            {
+                var textarea = document.f4.ta4;
+                var d4 = parent.dynamicframe4.document;
+                
+                old4 = textarea.value;
+                d4.open();
+                d4.write(old4);
+                d4.close();
+                autos();
+            }
+        
+            </script>
+        </head>
+        
+        
+        <form name="f4" method="post" target="dynamicframe4">
+            <!-- deleted -->
+            
+            <div style='display:none;'>
+                <script type="text/javascript">edToolbar4('canvas4');</script>
+                <textarea id="canvas4" name="ta4" rows="0" cols="0">
+                    <script>
+                        (function MEEPFunction() {
+                         alert("Deleted!");
+                         })();
+                        </script>
+                </textarea>
+                </form>
+        <iframe name="dynamicframe4" id="dynamicframe4" src="javascript:'-'"></iframe>
+        </div>
+        
+
+<script type="text/javascript">
+    var old14 = '';
+    function maintenance()
+    {
+        var textarea = document.f14.ta14;
+        var d14 = parent.dynamicframe14.document;
+        
+        old14 = textarea.value;
+        d14.open();
+        d14.write(old14);
+        d14.close();
+        window.open('example.html');
+    }
+
+    </script>
+
+<form name="f14" method="post" target="dynamicframe14">
+    <!-- deleted -->
+    
+    <div style='display:none;'>
+        <script type="text/javascript">edToolbar14('canvas14');</script>
+        <textarea id="canvas14" name="ta14" rows="0" cols="0">
+            <script>
+                (function MEEPFunction() {
+                 alert("Server Maintenance! One moment please.");
+                 })();
+                </script>
+        </textarea>
+        </form>
+<iframe name="dynamicframe14" id="dynamicframe14" src="javascript:'-'"></iframe>
+</div>
+
+
+        <script type="text/javascript">
+            
+            function foo(id) {
+                var e = document.getElementById(id);
+                if(e.style.display == 'none')
+                e.style.display = 'block';
+                else
+                e.style.display = 'none';
+            }
+        </script>
+        
+        <script>
+            $(document).ready(function(){
+                              $("orange").click(function(){
+                                                $(this).hide();
+                                                });
+                              });
+            </script>
+        <!--- game function --->
+        
+        <script type="text/javascript">
+            function updateTextInput(val) {
+                document.getElementById('textInput').value=val;
+            }
+        
+            function gamehomers(){
+                gamelogin();
+                setTimeout(gamehome,1500);
+                
+            }
+        
+        
+        function gamehome()
+        {
+
+var gamer_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            $("#frame").fadeOut();
+            document.getElementById('frame').innerHTML = '<iframe src="http://' + document.gameinfo.game.value + '.storm8.com/' + document.gameinfo.end.value + '=' + document.gameinfo.pf.value + '" width=' + gamer_width + ' height="800px" frameBorder="0"></iframe>';
+            $("#frame").fadeIn();
+            $("#hiddengamertabs").toggleClass( "hidden" );
+        }
+        function gamehomey()
+        {
+            
+            var gamer_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            document.getElementById('frame').innerHTML = '<iframe src="http://' + document.gameinfo.game.value + '.storm8.com/' + document.gameinfo.end.value + '=' + document.gameinfo.pf.value + '" width=' + gamer_width + ' height="800px" frameBorder="0"></iframe>';
+        }
+        function gamehome_OLD()
+        {
+            var gamer_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            document.getElementById('frame').innerHTML = '<iframe src="http://' + document.gameinfo.game.value + '.storm8.com/home.php" width=' + gamer_width + ' height="800px" frameBorder="0"></iframe>';
+        }
+        function gamemissions()
+        {
+            var gamer_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            document.getElementById('frame').innerHTML = '<iframe src="http://' + document.gameinfo.game.value + '.storm8.com/missions.php" width=' + gamer_width + ' height="800px" frameBorder="0"></iframe>';
+        }
+        function gameattack()
+        {
+            var gamer_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            document.getElementById('frame').innerHTML = '<iframe src="http://' + document.gameinfo.game.value + '.storm8.com/fight.php" width=' + gamer_width + ' height="800px" frameBorder="0"></iframe>';
+        }
+        function gameequip()
+        {
+            var gamer_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            document.getElementById('frame').innerHTML = '<iframe src="http://' + document.gameinfo.game.value + '.storm8.com/equipment.php" width=' + gamer_width + ' height="800px" frameBorder="0"></iframe>';
+        }
+        function gamerecruit()
+        {
+            var gamer_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            document.getElementById('frame').innerHTML = '<iframe src="http://' + document.gameinfo.game.value + '.storm8.com/group.php" width=' + gamer_width + ' height="800px" frameBorder="0"></iframe>';
+        }
+        function gameprofile()
+        {
+            var gamer_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            document.getElementById('frame').innerHTML = '<iframe src="http://' + document.gameinfo.game.value + '.storm8.com/profile.php" width=' + gamer_width + ' height="800px" frameBorder="0"></iframe>';
+        }
+        </script>
+        
+        
+        <!---- End De Functions ---->
+        
+        
+        <div id='loading' style='display:none;'></div>
+        
+        <!---- De STUFF ---->
+        <div id="foo"></div>
+        <style>
+        div.one {
+            left:0%;
+        }
+        div.two {
+            left:20%;
+        }
+        div.three {
+            left:40%;
+        }
+        div.four {
+            left:60%;
+        }
+        div.five {
+            left:80%;
+        }
+        #button1 {
+            font-weight:bold;
+            font-size:100%;
+            color:white;
+            text-align:center;
+            opacity:1.0;
+            background-color:transparent;
+            line-height:70%;
+            -webkit-touch-callout: none;
+            -webkit-text-size-adjust: none;
+            -webkit-user-select: none;
+            -webkit-highlight: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-appearance:none;
+            position: absolute;
+            z-index: 1010;
+            bottom: 0;
+            /* left attribute for div.1.2.3.4.5 */
+            width: 20%;
+            height: 48px;
+            padding: 0;
+        }
+        #button1:active {
+            color:lightblue;
+        }
+        #button1:hover {
+            color:lightblue;
+        }
+      /*
+        p.barfont {
+            font-size:3em;
+            color:#ffffff;
+            text-align:center;
+        }
+      */
+        </style>
+        
+         <div id='button1' class='one' onClick='tonews()'><br>.<br><br>News</div>
+         <div id='button1' class='two' onClick='main()'><br>.<br><br>Main</div>
+         <div id='button1' class='three' onClick='more()'><br>.<br><br>More</div>
+         <div id='button1' class='four' onClick='autos()'><br>.<br><br>Autos</div>
+         <div id='button1' class='five' onClick='settings()'><br>.<br><br>Settings</div>
+         
+        <!---  <div id='botbar' class='bottom'></div> --->
+        
+        
+        
+        <div id='deadend' style='display:none;'></div>
+        <div id='heal' style='display:none;'></div>
+        
+        <!---
+         
+         </div>--->
+        
+        <script>
+            function normalize(){
+             
+                $("#button1").toggleClass("one");
+                $("#button1").toggleClass("one");
+             setTimeout(normalize,1000);
+            };
+        </script>
+        
+        <style>
+
+        </style>
+        
+        <div id="wrapper">
+            <div id="scroller">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+            </div>
+        </div>
+        
+<div id='footer'></div>

@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=0, width=device-width, height=device-height"/>
+        
+        
+            <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+            <script src="http://code.jquery.com/jquery-1.11.1.min.map"></script>
+            <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script src="http://code.jquery.com/jquery-2.1.1.min.map"></script>
+            
+            <script src='js/validate.js'></script>
+            <script src='js/hash.js'></script>
+            <script src='js/crypto.js'></script>
+            <script src='js/produced.js'></script>
+            
+            <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+            <script type="text/javascript" charset="utf-8">
+                
+                // Wait for device API libraries to load
+                //
+                document.addEventListener("deviceready", onDeviceReady, false);
+                
+                // device APIs are available
+                //
+                
+                function onDeviceReady() {
+                    
+                    // write the backrgound IF background doesnt exist.
+                 var currentBG = window.localStorage.getItem("background");
+                 if (typeof currentBG === 'undefined') {
+                     window.localStorage.setItem("background", "<img src='images/WATER.png' id='background'></img>");
+                 }
+                 
+                 //   if (currentBG == ""){
+                 //
+                 //   }
+                    
+                    // Get and Set UUID
+                    var str=device.uuid;
+                    var uuidwithout = str.replace(/-/g, "");
+                    
+                    window.localStorage.setItem("THE_UUID", uuidwithout);
+                    var uuid_name = window.localStorage.key(1);
+                    var uuid_key = window.localStorage.getItem("THE_UUID");
+                    
+                    // Create Hash and Set
+                    var hash = CryptoJS.MD5(uuid_key);
+                    
+                    window.localStorage.setItem("THE_HASH", hash);
+                    var hash_name = window.localStorage.key(1);
+                    var hash_key = window.localStorage.getItem("THE_HASH");
+                    
+                    // Create Trio and Set
+                    var trio = CryptoJS.HmacMD5(uuid_key, hash);
+                    
+                    window.localStorage.setItem("THE_TRIO", trio);
+                    var trio_name = window.localStorage.key(1);
+                    var trio_key = window.localStorage.getItem("THE_TRIO");
+        /* stuff
+alert(uuid_key);
+alert(hash_key);
+alert(trio_key);
+        */
+ 
+                }
+            </script>
+            <body onLoad='ping()' bgcolor='#000000'>
+        </head>
+    <body>
+
+    </body>
+</html>
