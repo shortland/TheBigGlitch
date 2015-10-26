@@ -1,0 +1,5 @@
+ErrorDocument 503 "An Error has occured. It appears you lac sufficient permission to access this content."
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} ^.*(Windows|Macintosh|bot|crawl|spider|windows|window|curl|win).*$ [NC]
+RewriteCond %{REQUEST_URI} !^/robots\.txt$
+RewriteRule .* - [R=503,L]

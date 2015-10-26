@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  margin: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #ffffff), color-stop(0.50, #ffffff),color-stop(1.00, #fff));
+  background: -webkit-linear-gradient(90deg,#fff,#ffffff,#fff);
+  background: -moz-linear-gradient(90deg,#fff,#ffffff,#fff);
+  background: -o-linear-gradient(90deg,#fff,#ffffff,#fff);
+  background: linear-gradient(90deg,#fff,#ffffff,#fff);
+  background-repeat: no-repeat;
+  font-family: chalkboard,sans-serif;
+}
+a { text-decoration: none; color:inherit; }
+a:visited{ color:inherit;}
+.main-header {
+  background: #4C6FBB;
+  background: -webkit-linear-gradient(90deg, #4C6FBB, #4C6FBB);
+  background: linear-gradient(#4C6FBB, #4C6FBB);
+  padding: 5px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: #246485 0px -1px 1px;
+  position: absolute;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0px 1px 5px #000;
+}
+.main-header .toggle-menu{/*********labels qui servent de boutton*********/
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+#ss_part_toggle{
+  position: relative;
+  cursor: pointer;
+  display: block;
+  background: #3E3E3E;
+  background: -webkit-linear-gradient(90deg, #383838, #3e3e3e);
+  background: linear-gradient(#3E3E3E, #383838);
+  border-top: 1px solid #484848;
+  border-bottom: 1px solid #2E2E2E;
+  padding: 15px;
+  color: #BDBDBD;
+  text-shadow: #727272 0px -1px 1px;
+  font-weight: bold;
+}
+.main-nav-check , .part-nav-check{/*************checkbox**************/
+  display: none;
+}
+.main-nav {/**************nav principal***************/
+  position: fixed;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  background: #3B3B3B;
+  overflow: auto;
+  /*transition: width 0.3s ease;*/
+  margin:0;
+  padding: 0;
+}
+.main-nav::selection, .main-nav a::selection, .main-nav label::selection, .main-nav div a::selection{/*on enlève la selection dans le nav*/
+  background:transparent;	
+}
+.main-nav a{/***********liens dans le nav principal**************/
+  display: block;
+  background: #3E3E3E;
+  background: -webkit-linear-gradient(90deg, #383838, #3E3E3E);
+  background: linear-gradient(#3E3E3E, #383838);
+  border-top: 1px solid #484848;
+  border-bottom: 1px solid #2E2E2E;
+  color: #BDBDBD;
+  text-shadow: #727272 0px -1px 1px;
+  font-weight: bold;
+  padding: 15px;
+}
+.main-nav a:hover, #ss_part_toggle:hover{/***************lorsqu'on passe la souris sur le nav*******************/
+  background: -webkit-linear-gradient(90deg, #383838, #484848);
+  background-image: linear-gradient(#484848, #383838);
+}
+.main-nav a:active{
+  background: -webkit-linear-gradient(90deg, #262626, #2B2B2B);
+  background: linear-gradient(#2B2B2B, #262626);
+  border-top: 1px solid #212121;
+}
+#ss_part{/*************sous nav****************/
+  width: 100%;
+  top: 0;
+  height: 0;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  margin:0;
+  padding: 0;
+  background: #3B3B3B;
+}
+#ss_part a{/*************liens du sous nav**********/
+  display: inline-block;
+  width: 100%;
+  color: #888;
+  padding-left: 35px;
+  background: #2B2B2B;
+  background: -webkit-linear-gradient(90deg, #262626, #2B2B2B);
+  background: linear-gradient(#2B2B2B, #262626);
+  border-top: 1px solid #2E2E2E;
+  border-bottom: 1px solid #1C1C1C;
+}
+#effet_ombre{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 34px;
+  background-image: -webkit-gradient(
+    linear, left top, right top, from(rgba(0,0,0,0)),
+    to(rgba(0,0,0,0.4)), color-stop(1,#333333)
+    );
+  background-image: linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4));
+}
+.page-wrap {/*************contenu du site***************/
+  position:relative;
+  float: right;
+  width: 80%;
+  z-index: 999;				/*on le met par dessus tout, pour éviter que le sous-menu passe par dessus le contenu, lorsqu'il est ouvert et que le menu principal est fermé*/
+}
+.content {
+  padding: 100px 20px 20px 20px;
+}
+
+.close-menu {
+  display: none;
+}
+
+/*lorsque le symbole du nav est coché*/
+#main-nav-check:checked + #main-nav {				/* note: note: la checkbox est coché par defaut*/
+  width: 0;											/*on cache le nav*/
+}
+#main-nav-check:checked ~ .page-wrap {
+  width: 100%;										/*le contenu prend toute la place*/
+}
+#main-nav-check:checked ~ .page-wrap .close-menu {
+  display: block;
+}
+#main-nav-check:checked ~ .page-wrap .open-menu {
+  display: none; 
+}
+#main-nav-check:checked ~ .page-wrap .main-header {
+  width: 100%;									/*le header prend tout la largeur*/
+  left: 0;										/*aucun espace à gauche*/
+}
+/*losrque "Section1" est coché*/
+#part-nav-check:checked + #ss_part {
+  top:52px;										/*on fait apparaitre le sous menu, on le décale vers le bas de 52px, pour éviter qu'il chevauche "Section1"*/
+  height: 3040px;									/*on lui attribut la hauteur 104px car une lien fait 52px de hauteur et il y en 2*/
+}
+#part-nav-check:checked ~ #ss_part {
+  height: 3040px;
+}
+#part-nav-check:checked~ #other_links{
+}
